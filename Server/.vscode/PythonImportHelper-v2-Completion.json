@@ -138,10 +138,34 @@
     },
     {
         "label": "Gender",
-        "importPath": "src.models.scalar",
-        "description": "src.models.scalar",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
         "isExtraImport": true,
-        "detail": "src.models.scalar",
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "SignInOut",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginDto",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegisterDto",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
         "documentation": {}
     },
     {
@@ -206,30 +230,6 @@
         "description": "src.utils.auth",
         "isExtraImport": true,
         "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "SignInOut",
-        "importPath": "src.types.user_types",
-        "description": "src.types.user_types",
-        "isExtraImport": true,
-        "detail": "src.types.user_types",
-        "documentation": {}
-    },
-    {
-        "label": "UserLoginDto",
-        "importPath": "src.types.user_types",
-        "description": "src.types.user_types",
-        "isExtraImport": true,
-        "detail": "src.types.user_types",
-        "documentation": {}
-    },
-    {
-        "label": "UserRegisterDto",
-        "importPath": "src.types.user_types",
-        "description": "src.types.user_types",
-        "isExtraImport": true,
-        "detail": "src.types.user_types",
         "documentation": {}
     },
     {
@@ -385,10 +385,10 @@
     {
         "label": "Gender",
         "kind": 6,
-        "importPath": "src.models.scalar",
-        "description": "src.models.scalar",
-        "peekOfCode": "class Gender(Enum):\n    Male = \"male\"\n    Female = \"female\"",
-        "detail": "src.models.scalar",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "peekOfCode": "class Gender(Enum):\n    Male = \"male\"\n    Female = \"female\"\nclass UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str",
+        "detail": "src.types.user_types",
         "documentation": {}
     },
     {
@@ -396,7 +396,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : str\nclass SignInOut(BaseModel):\n    token: str",
+        "peekOfCode": "class UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : Gender\nclass SignInOut(BaseModel):\n    token: str",
         "detail": "src.types.user_types",
         "documentation": {}
     },
@@ -405,7 +405,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : str\nclass SignInOut(BaseModel):\n    token: str\n    id : str",
+        "peekOfCode": "class UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : Gender\nclass SignInOut(BaseModel):\n    token: str\n    id : str",
         "detail": "src.types.user_types",
         "documentation": {}
     },

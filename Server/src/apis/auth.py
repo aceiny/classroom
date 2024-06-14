@@ -2,7 +2,7 @@ import datetime
 from typing import List, Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from src.models.scalar import Gender
+from src.types.user_types import Gender
 from src.prisma import prisma
 from src.utils.auth import (
     encryptPassword,
