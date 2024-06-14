@@ -1,0 +1,529 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "importPath": "src.models.scalar",
+        "description": "src.models.scalar",
+        "isExtraImport": true,
+        "detail": "src.models.scalar",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "encryptPassword",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "signJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "validatePassword",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SignInOut",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginDto",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegisterDto",
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "isExtraImport": true,
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Self",
+        "importPath": "typing_extensions",
+        "description": "typing_extensions",
+        "isExtraImport": true,
+        "detail": "typing_extensions",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bcrypt",
+        "description": "bcrypt",
+        "detail": "bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "Prisma",
+        "importPath": "prisma",
+        "description": "prisma",
+        "isExtraImport": true,
+        "detail": "prisma",
+        "documentation": {}
+    },
+    {
+        "label": "Prisma",
+        "importPath": "prisma",
+        "description": "prisma",
+        "isExtraImport": true,
+        "detail": "prisma",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "apis",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "GZipMiddleware",
+        "importPath": "fastapi.middleware.gzip",
+        "description": "fastapi.middleware.gzip",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.gzip",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "Server.src.apis.auth",
+        "description": "Server.src.apis.auth",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/auth/sign-in\", tags=[\"auth\"])\nasync def sign_in(signIn: UserLoginDto):\n    try : \n            user = await prisma.user.find_first(\n                where={\n                    \"username\": signIn.username,\n                }\n            )\n    except Exception as e : ",
+        "detail": "Server.src.apis.auth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "Server.src.apis.users",
+        "description": "Server.src.apis.users",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/users/\", tags=[\"users\"])\nasync def read_users():\n    users = await prisma.user.find_many()\n    print(\"users\", users)\n    for user in users:\n        del user.password\n    return users\n@router.get(\"/users/me\", tags=[\"users\"])\nasync def read_user_me(token=Depends(JWTBearer())):",
+        "detail": "Server.src.apis.users",
+        "documentation": {}
+    },
+    {
+        "label": "Gender",
+        "kind": 6,
+        "importPath": "Server.src.models.scalar",
+        "description": "Server.src.models.scalar",
+        "peekOfCode": "class Gender(Enum):\n    Male = \"male\"\n    Female = \"female\"",
+        "detail": "Server.src.models.scalar",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginDto",
+        "kind": 6,
+        "importPath": "Server.src.types.user_types",
+        "description": "Server.src.types.user_types",
+        "peekOfCode": "class UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : str\nclass SignInOut(BaseModel):\n    token: str",
+        "detail": "Server.src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegisterDto",
+        "kind": 6,
+        "importPath": "Server.src.types.user_types",
+        "description": "Server.src.types.user_types",
+        "peekOfCode": "class UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : str\nclass SignInOut(BaseModel):\n    token: str\n    id : str",
+        "detail": "Server.src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "SignInOut",
+        "kind": 6,
+        "importPath": "Server.src.types.user_types",
+        "description": "Server.src.types.user_types",
+        "peekOfCode": "class SignInOut(BaseModel):\n    token: str\n    id : str",
+        "detail": "Server.src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "JWTBearer",
+        "kind": 6,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "class JWTBearer(HTTPBearer):\n    def __init__(self, auto_error: bool = True):\n        super(JWTBearer, self).__init__(auto_error=auto_error)\n    async def __call__(self, request: Request):\n        credentials: HTTPAuthorizationCredentials = await super(\n            JWTBearer, self\n        ).__call__(request)\n        if credentials:\n            if not credentials.scheme == \"Bearer\":\n                raise HTTPException(",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "signJWT",
+        "kind": 2,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "def signJWT(user_id: str) -> Dict[str, str]:\n    EXPIRES = datetime.now(tz=timezone.utc) + timedelta(days=365)\n    payload = {\n        \"exp\": EXPIRES,\n        \"userId\": user_id,\n    }\n    token = jwt.encode(payload, jwtSecret, algorithm=\"HS256\")\n    return token\ndef decodeJWT(token: str) -> dict:\n    try:",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "kind": 2,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "def decodeJWT(token: str) -> dict:\n    try:\n        decoded = jwt.decode(token, jwtSecret, algorithms=[\"HS256\"])\n        return decoded if decoded[\"expires\"] else None\n    except jwt.ExpiredSignatureError:\n        print(\"Token expired. Get new one\")\n        return None\n    except:\n        return None\ndef encryptPassword(password: str) -> str:",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "encryptPassword",
+        "kind": 2,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "def encryptPassword(password: str) -> str:\n    return bcrypt.hashpw(password.encode(\"utf-8\"), bcrypt.gensalt()).decode(\"utf-8\")\ndef validatePassword(password: str, encrypted: str) -> str:\n    return bcrypt.checkpw(password.encode(\"utf-8\"), encrypted.encode(\"utf-8\"))\nclass JWTBearer(HTTPBearer):\n    def __init__(self, auto_error: bool = True):\n        super(JWTBearer, self).__init__(auto_error=auto_error)\n    async def __call__(self, request: Request):\n        credentials: HTTPAuthorizationCredentials = await super(\n            JWTBearer, self",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "validatePassword",
+        "kind": 2,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "def validatePassword(password: str, encrypted: str) -> str:\n    return bcrypt.checkpw(password.encode(\"utf-8\"), encrypted.encode(\"utf-8\"))\nclass JWTBearer(HTTPBearer):\n    def __init__(self, auto_error: bool = True):\n        super(JWTBearer, self).__init__(auto_error=auto_error)\n    async def __call__(self, request: Request):\n        credentials: HTTPAuthorizationCredentials = await super(\n            JWTBearer, self\n        ).__call__(request)\n        if credentials:",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "jwtSecret",
+        "kind": 5,
+        "importPath": "Server.src.utils.auth",
+        "description": "Server.src.utils.auth",
+        "peekOfCode": "jwtSecret = os.environ.get(\"JWT_SECRET\")\ndef signJWT(user_id: str) -> Dict[str, str]:\n    EXPIRES = datetime.now(tz=timezone.utc) + timedelta(days=365)\n    payload = {\n        \"exp\": EXPIRES,\n        \"userId\": user_id,\n    }\n    token = jwt.encode(payload, jwtSecret, algorithm=\"HS256\")\n    return token\ndef decodeJWT(token: str) -> dict:",
+        "detail": "Server.src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "kind": 5,
+        "importPath": "Server.src.prisma",
+        "description": "Server.src.prisma",
+        "peekOfCode": "prisma = Prisma()",
+        "detail": "Server.src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "test_root",
+        "kind": 2,
+        "importPath": "Server.test.test_main",
+        "description": "Server.test.test_main",
+        "peekOfCode": "def test_root():\n    response = client.get(\"/\")\n    assert response.status_code == 200",
+        "detail": "Server.test.test_main",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "Server.test.test_main",
+        "description": "Server.test.test_main",
+        "peekOfCode": "client = TestClient(app)\nprisma = Prisma()\ndef test_root():\n    response = client.get(\"/\")\n    assert response.status_code == 200",
+        "detail": "Server.test.test_main",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "kind": 5,
+        "importPath": "Server.test.test_main",
+        "description": "Server.test.test_main",
+        "peekOfCode": "prisma = Prisma()\ndef test_root():\n    response = client.get(\"/\")\n    assert response.status_code == 200",
+        "detail": "Server.test.test_main",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "Server.main",
+        "description": "Server.main",
+        "peekOfCode": "def read_root():\n    return {\"version\": \"1.0.0\"}",
+        "detail": "Server.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Server.main",
+        "description": "Server.main",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(GZipMiddleware, minimum_size=1000)\napp.include_router(apis, prefix=\"/apis\")\n@app.on_event(\"startup\")\nasync def startup():\n    await prisma.connect()\n@app.on_event(\"shutdown\")\nasync def shutdown():\n    await prisma.disconnect()\napp.include_router(users.router)",
+        "detail": "Server.main",
+        "documentation": {}
+    }
+]
