@@ -7,7 +7,7 @@ class Gender(Enum):
 
 class UserRole(Enum) : 
     Student = "Student"
-    Professeur = "Professeur"
+    Professor = "Professor"
 
 class UserLoginDto(BaseModel) : 
     email : EmailStr

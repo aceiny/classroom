@@ -13,17 +13,43 @@ router = APIRouter(
 )
 
 
+@router.get('/me', tags=["enrollment"])
+async def get_enrollments():
+    userId = "clxgdek8c00007q5axo4hg1dc"
+    enrollment = await prisma.enrollment.find_many(
+        where={
+            "membreId": userId 
+        },
+        include={
+            "classroom": True,
+        }
+    )
+    return enrollment
 @router.post('/{classroomId}', tags=["enrollment"])
 async def add_enrollment(classroomId : str):
     print(classroomId)
-    userId = "clxgbavm30000bi7w2sae11kn"
-    classroom_id = "clxgcef8200013b18nu6uo0p8"
-    classroom = await prisma.classroom.find_unique(where={"id": classroom_id})
+    userId = "clxgdek8c00007q5axo4hg1dc"
+    classroom = await prisma.classroom.find_unique(
+        where={
+            "id": classroomId
+            }
+        )
     if not classroom : 
         raise HTTPException(status_code=404, detail="Classroom not found")
+    
+    enrollment_exists = await prisma.enrollment.find_first(
+        where={
+            "membreId": userId,
+            "classroomId": classroomId
+        }
+    )
+    if enrollment_exists:
+        raise HTTPException(status_code=400, detail="Enrollment already exists")
+    
     enrollment = await prisma.enrollment.create({
         "membreId": userId,
-        "classroomId": classroom_id
+        "classroomId": classroomId
     })
     if not enrollment : 
         raise HTTPException(status_code=404, detail="Enrollment failed")
+    return enrollment

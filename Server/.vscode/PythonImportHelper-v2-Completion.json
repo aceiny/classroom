@@ -433,6 +433,14 @@
         "documentation": {}
     },
     {
+        "label": "UpdateClassRoomDto",
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "isExtraImport": true,
+        "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
         "label": "CreateClassRoomDto",
         "importPath": "src.types.classroom_types",
         "description": "src.types.classroom_types",
@@ -578,7 +586,7 @@
         "kind": 5,
         "importPath": "src.apis.classroom",
         "description": "src.apis.classroom",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/classroom\",\n    tags=[\"classroom\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/', tags=[\"classroom\"])\nasync def read_classrooms():\n    classrooms = await prisma.classroom.find_many()\n    return classrooms\n@router.get('/me', tags=[\"classroom\"])",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/classroom\",\n    tags=[\"classroom\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/', tags=[\"classroom\"])\nasync def read_classrooms():\n    classrooms = await prisma.classroom.find_many()\n    return classrooms\n@router.post('/')",
         "detail": "src.apis.classroom",
         "documentation": {}
     },
@@ -587,7 +595,7 @@
         "kind": 5,
         "importPath": "src.apis.enrollment",
         "description": "src.apis.enrollment",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.post('/{classroomId}', tags=[\"enrollment\"])\nasync def add_enrollment(classroomId : str):\n    print(classroomId)\n    userId = \"clxgbavm30000bi7w2sae11kn\"\n    classroom_id = \"clxgcef8200013b18nu6uo0p8\"",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/me', tags=[\"enrollment\"])\nasync def get_enrollments():\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    enrollment = await prisma.enrollment.find_many(\n        where={",
         "detail": "src.apis.enrollment",
         "documentation": {}
     },
@@ -623,7 +631,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class Gender(Enum):\n    Male = \"Male\"\n    Female = \"Female\"\nclass UserRole(Enum) : \n    Student = \"Student\"\n    Professeur = \"Professeur\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : ",
+        "peekOfCode": "class Gender(Enum):\n    Male = \"Male\"\n    Female = \"Female\"\nclass UserRole(Enum) : \n    Student = \"Student\"\n    Professor = \"Professor\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : ",
         "detail": "src.types.user_types",
         "documentation": {}
     },
@@ -632,7 +640,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class UserRole(Enum) : \n    Student = \"Student\"\n    Professeur = \"Professeur\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : \n    name : str \n    email : EmailStr \n    password : str",
+        "peekOfCode": "class UserRole(Enum) : \n    Student = \"Student\"\n    Professor = \"Professor\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : \n    name : str \n    email : EmailStr \n    password : str",
         "detail": "src.types.user_types",
         "documentation": {}
     },
