@@ -8,19 +8,64 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum Gender {
-  male
-  female
+model User {
+  id                    String       @id @default(cuid())
+  name                  String
+  email                 String       @unique
+  password              String
+  gender                Gender
+  role                  UserRole
+  classroomsAsProfessor Classroom[]  @relation("ProfessorClassrooms")
+  enrollments           Enrollment[]
+  submissions           Submission[]
+  courseworks           Coursework[] @relation("CourseworkProfessor") 
 }
 
-model User {
-  id        String    @id @default(cuid()) @db.VarChar(255)
-  username  String?   @db.VarChar(255)
-  password  String?   @db.VarChar(255)
-  name      String?   @db.VarChar(255)
-  photoURL  String?   @db.VarChar(255) @default("")
-  gender    Gender?
-  createdAt DateTime? @default(now())
-  updatedAt DateTime? @default(now())
-  deletedAt DateTime?
+enum Gender {
+  Male
+  Female
+}
+
+enum UserRole {
+  Student
+  Professeur
+}
+
+model Classroom {
+  id          String       @id @default(cuid())
+  name        String
+  professorId String
+  professor   User         @relation("ProfessorClassrooms", fields: [professorId], references: [id])
+  enrollments Enrollment[]
+  coursework  Coursework[]
+}
+
+model Enrollment {
+  id          String    @id @default(cuid())
+  studentId   String
+  student     User      @relation(fields: [studentId], references: [id])
+  classroomId String
+  classroom   Classroom @relation(fields: [classroomId], references: [id])
+}
+
+model Coursework {
+  id          String       @id @default(cuid())
+  classroomId String
+  professorId String
+  title       String
+  Assignment  Boolean
+  description String
+  due_date    String
+  classroom   Classroom    @relation(fields: [classroomId], references: [id])
+  professor   User         @relation("CourseworkProfessor", fields: [professorId], references: [id]) // Updated line
+  submissions Submission[]
+}
+
+model Submission {
+  id           String     @id @default(cuid())
+  courseworkId String
+  studentId    String
+  content      String
+  coursework   Coursework @relation(fields: [courseworkId], references: [id])
+  student      User       @relation(fields: [studentId], references: [id])
 }
