@@ -13,5 +13,5 @@ class CourseWorkType(Enum):
 class CreateCoursworkDto(BaseModel):
     title: str
     description: str
-    due_date: datetime
+    due_date: datetime.datetime
     type: CourseWorkType

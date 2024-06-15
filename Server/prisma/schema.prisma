@@ -19,7 +19,7 @@ model User {
   classroomsAsProfessor Classroom[]  @relation("ProfessorClassrooms")
   enrollments           Enrollment[]
   submissions           Submission[]
-  courseworks           Coursework[] @relation("CourseworkProfessor") 
+  Coursworks           Courswork[] @relation("CoursworkProfessor") 
 }
 
 enum Gender {
@@ -38,7 +38,7 @@ model Classroom {
   professorId String
   professor   User         @relation("ProfessorClassrooms", fields: [professorId], references: [id])
   enrollments Enrollment[]
-  coursework  Coursework[]
+  Courswork  Courswork[]
   inviteLinks InviteLink[]
 }
 model InviteLink { 
@@ -56,20 +56,20 @@ model Enrollment {
   classroom   Classroom @relation(fields: [classroomId], references: [id])
 }
 
-model Coursework {
+model Courswork {
   id          String       @id @default(cuid())
   classroomId String
   professorId String
   title       String
-  type        CourseWorkType
+  type        CoursworkType
   description String
   due_date    DateTime
   classroom   Classroom    @relation(fields: [classroomId], references: [id])
-  professor   User         @relation("CourseworkProfessor", fields: [professorId], references: [id]) // Updated line
+  professor   User         @relation("CoursworkProfessor", fields: [professorId], references: [id]) // Updated line
   submissions Submission[]
 }
 
-enum CourseWorkType{
+enum CoursworkType{
   Assignment
   Quiz
   Project
@@ -78,11 +78,11 @@ enum CourseWorkType{
 }
 model Submission {
   id           String     @id @default(cuid())
-  courseworkId String
+  CoursworkId String
   studentId    String
   content      String
   files       File[]
-  coursework   Coursework @relation(fields: [courseworkId], references: [id])
+  Courswork   Courswork @relation(fields: [CoursworkId], references: [id])
   student      User       @relation(fields: [studentId], references: [id])
 }
 model File {

@@ -80,6 +80,14 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -89,6 +97,30 @@
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -280,6 +312,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -317,6 +357,14 @@
         "description": "src.types.user_types",
         "isExtraImport": true,
         "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
         "documentation": {}
     },
     {
@@ -464,6 +512,22 @@
         "documentation": {}
     },
     {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
         "label": "src.apis",
         "kind": 6,
         "isExtraImport": true,
@@ -510,6 +574,22 @@
         "description": "src.apis",
         "isExtraImport": true,
         "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "submission",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.apis.auth",
+        "description": "src.apis.auth",
+        "isExtraImport": true,
+        "detail": "src.apis.auth",
         "documentation": {}
     },
     {
@@ -582,6 +662,54 @@
         "description": "src.utils.classroom",
         "isExtraImport": true,
         "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_user_is_classroom_professor",
+        "importPath": "src.utils.classroom",
+        "description": "src.utils.classroom",
+        "isExtraImport": true,
+        "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_user_enrolleed_in_classroom",
+        "importPath": "src.utils.classroom",
+        "description": "src.utils.classroom",
+        "isExtraImport": true,
+        "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_user_is_classroom_professor",
+        "importPath": "src.utils.classroom",
+        "description": "src.utils.classroom",
+        "isExtraImport": true,
+        "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_user_enrolleed_in_classroom",
+        "importPath": "src.utils.classroom",
+        "description": "src.utils.classroom",
+        "isExtraImport": true,
+        "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "CreateCoursworkDto",
+        "importPath": "src.types.courswork_types",
+        "description": "src.types.courswork_types",
+        "isExtraImport": true,
+        "detail": "src.types.courswork_types",
+        "documentation": {}
+    },
+    {
+        "label": "CreateSubmissionDto",
+        "importPath": "src.types.submission_types",
+        "description": "src.types.submission_types",
+        "isExtraImport": true,
+        "detail": "src.types.submission_types",
         "documentation": {}
     },
     {
@@ -740,7 +868,7 @@
         "kind": 5,
         "importPath": "src.apis.courswork",
         "description": "src.apis.courswork",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/courswork\",\n    tags=[\"courswork\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_coursworks(classroomId : str):\n    classroom = await prisma.classroom.find_unique(\n        where = {\n            id : classroomId",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/courswork\",\n    tags=[\"courswork\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_coursworks(classroomId : str):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_enrolleed_in_classroom(classroomId, userId)\n    classroom = await prisma.classroom.find_unique(",
         "detail": "src.apis.courswork",
         "documentation": {}
     },
@@ -751,6 +879,15 @@
         "description": "src.apis.enrollment",
         "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/me', tags=[\"enrollment\"])\nasync def get_enrollments():\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    enrollment = await prisma.enrollment.find_many(\n        where={",
         "detail": "src.apis.enrollment",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "src.apis.submission",
+        "description": "src.apis.submission",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/submission\",\n    tags=[\"submission\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_submissions(classroomId : str,submission : CreateSubmissionDto):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_is_classroom_professor(classroomId, userId)\n    submissions = await prisma.submission.find_many(",
+        "detail": "src.apis.submission",
         "documentation": {}
     },
     {
@@ -785,7 +922,7 @@
         "kind": 6,
         "importPath": "src.types.courswork_types",
         "description": "src.types.courswork_types",
-        "peekOfCode": "class CourseWorkType(Enum):\n    Assignment = \"Assignment\"\n    Quiz = \"Quiz\"\n    Exam = \"Exam\"\n    Project = \"Project\"\n    Other = \"Other\"\nclass CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime",
+        "peekOfCode": "class CourseWorkType(Enum):\n    Assignment = \"Assignment\"\n    Quiz = \"Quiz\"\n    Exam = \"Exam\"\n    Project = \"Project\"\n    Other = \"Other\"\nclass CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime.datetime",
         "detail": "src.types.courswork_types",
         "documentation": {}
     },
@@ -794,8 +931,17 @@
         "kind": 6,
         "importPath": "src.types.courswork_types",
         "description": "src.types.courswork_types",
-        "peekOfCode": "class CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime\n    type: CourseWorkType",
+        "peekOfCode": "class CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime.datetime\n    type: CourseWorkType",
         "detail": "src.types.courswork_types",
+        "documentation": {}
+    },
+    {
+        "label": "CreateSubmissionDto",
+        "kind": 6,
+        "importPath": "src.types.submission_types",
+        "description": "src.types.submission_types",
+        "peekOfCode": "class CreateSubmissionDto(BaseModel):\n    content : str\n    files : list[str]\n    coursworkId : str",
+        "detail": "src.types.submission_types",
         "documentation": {}
     },
     {

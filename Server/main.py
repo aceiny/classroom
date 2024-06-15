@@ -1,7 +1,7 @@
 from src.prisma import prisma
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi import FastAPI
-from src.apis import users , auth , classroom , enrollment , courswork
+from src.apis import users , auth , classroom , enrollment , courswork , submission
 app = FastAPI()
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
@@ -19,6 +19,7 @@ app.include_router(auth.router)
 app.include_router(classroom.router)
 app.include_router(enrollment.router)
 app.include_router(courswork.router)
+app.include_router(submission.router)
 @app.get("/")
 def read_root():
     return {"version": "1.0.0"}

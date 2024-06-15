@@ -12,7 +12,6 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-
 @router.get('/', tags=["classroom"])
 async def read_classrooms():
     classrooms = await prisma.classroom.find_many()
