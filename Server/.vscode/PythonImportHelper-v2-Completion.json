@@ -16,6 +16,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -25,6 +33,22 @@
     },
     {
         "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -80,6 +104,62 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -105,6 +185,22 @@
     },
     {
         "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -184,6 +280,22 @@
         "documentation": {}
     },
     {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
         "label": "encryptPassword",
         "importPath": "src.utils.auth",
         "description": "src.utils.auth",
@@ -221,6 +333,111 @@
         "description": "src.utils.auth",
         "isExtraImport": true,
         "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "src.apis",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "classroom",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "enrollment",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.apis.auth",
+        "description": "src.apis.auth",
+        "isExtraImport": true,
+        "detail": "src.apis.auth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.apis.auth",
+        "description": "src.apis.auth",
+        "isExtraImport": true,
+        "detail": "src.apis.auth",
+        "documentation": {}
+    },
+    {
+        "label": "CreateClassRoomDto",
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "isExtraImport": true,
+        "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "CreateClassRoomDto",
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "isExtraImport": true,
+        "detail": "src.types.classroom_types",
         "documentation": {}
     },
     {
@@ -340,30 +557,6 @@
         "documentation": {}
     },
     {
-        "label": "apis",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "users",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "auth",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
         "label": "GZipMiddleware",
         "importPath": "fastapi.middleware.gzip",
         "description": "fastapi.middleware.gzip",
@@ -376,8 +569,26 @@
         "kind": 5,
         "importPath": "src.apis.auth",
         "description": "src.apis.auth",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/auth\",\n    tags=[\"auth\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.post(\"/sign-in\", tags=[\"auth/signin\"])\nasync def sign_in(signIn: UserLoginDto):\n    user = await prisma.user.find_first(\n            where={\n                \"email\": signIn.email,",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/auth\",\n    tags=[\"auth\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.post(\"/sign-in\")\nasync def sign_in(signIn: UserLoginDto):\n    user = await prisma.user.find_first(\n            where={\n                \"email\": signIn.email,",
         "detail": "src.apis.auth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "src.apis.classroom",
+        "description": "src.apis.classroom",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/classroom\",\n    tags=[\"classroom\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/', tags=[\"classroom\"])\nasync def read_classrooms():\n    classrooms = await prisma.classroom.find_many()\n    return classrooms\n@router.get('/me', tags=[\"classroom\"])",
+        "detail": "src.apis.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "src.apis.enrollment",
+        "description": "src.apis.enrollment",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.post('/{classroomId}', tags=[\"enrollment\"])\nasync def add_enrollment(classroomId : str):\n    print(classroomId)\n    userId = \"clxgbavm30000bi7w2sae11kn\"\n    classroom_id = \"clxgcef8200013b18nu6uo0p8\"",
+        "detail": "src.apis.enrollment",
         "documentation": {}
     },
     {
@@ -385,8 +596,26 @@
         "kind": 5,
         "importPath": "src.apis.users",
         "description": "src.apis.users",
-        "peekOfCode": "router = APIRouter()\n@router.get(\"/users/\", tags=[\"users\"])\nasync def read_users():\n    users = await prisma.user.find_many()\n    print(\"users\", users)\n    for user in users:\n        del user.password\n    return users\n@router.get(\"/users/me\", tags=[\"users\"])\nasync def read_user_me(token=Depends(JWTBearer())):",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/user\",\n    tags=[\"user\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get(\"/\", tags=[\"users\"])\nasync def read_users():\n    users = await prisma.user.find_many()\n    for user in users:\n        del user.password",
         "detail": "src.apis.users",
+        "documentation": {}
+    },
+    {
+        "label": "CreateClassRoomDto",
+        "kind": 6,
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "peekOfCode": "class CreateClassRoomDto(BaseModel) : \n    name : str \nclass UpdateClassRoomDto(BaseModel) : \n    name : str",
+        "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateClassRoomDto",
+        "kind": 6,
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "peekOfCode": "class UpdateClassRoomDto(BaseModel) : \n    name : str",
+        "detail": "src.types.classroom_types",
         "documentation": {}
     },
     {
@@ -457,7 +686,7 @@
         "kind": 2,
         "importPath": "src.utils.auth",
         "description": "src.utils.auth",
-        "peekOfCode": "def decodeJWT(token: str) -> dict:\n    try:\n        decoded = jwt.decode(token, jwtSecret, algorithms=[\"HS256\"])\n        return decoded if decoded[\"expires\"] else None\n    except jwt.ExpiredSignatureError:\n        print(\"Token expired. Get new one\")\n        return None\n    except:\n        return None\ndef encryptPassword(password: str) -> str:",
+        "peekOfCode": "def decodeJWT(token: str) -> dict:\n    try:\n        decoded = jwt.decode(token, jwtSecret, algorithms=[\"HS256\"])\n        print(decoded)\n        return decoded if decoded[\"exp\"] else None\n    except jwt.ExpiredSignatureError:\n        raise HTTPException(status_code=403, detail=\"Token expired.\")\n    except:\n        raise HTTPException(status_code=403, detail=\"Invalid token.\")\ndef encryptPassword(password: str) -> str:",
         "detail": "src.utils.auth",
         "documentation": {}
     },
@@ -538,7 +767,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(GZipMiddleware, minimum_size=1000)\napp.include_router(apis, prefix=\"/apis\")\n@app.on_event(\"startup\")\nasync def startup():\n    await prisma.connect()\n@app.on_event(\"shutdown\")\nasync def shutdown():\n    await prisma.disconnect()\napp.include_router(users.router)",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(GZipMiddleware, minimum_size=1000)\n@app.on_event(\"startup\")\nasync def startup():\n    await prisma.connect()\n@app.on_event(\"shutdown\")\nasync def shutdown():\n    await prisma.disconnect()\napp.include_router(users.router)\napp.include_router(auth.router)",
         "detail": "main",
         "documentation": {}
     }

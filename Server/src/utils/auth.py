@@ -25,12 +25,12 @@ def signJWT(user_id: str) -> Dict[str, str]:
 def decodeJWT(token: str) -> dict:
     try:
         decoded = jwt.decode(token, jwtSecret, algorithms=["HS256"])
-        return decoded if decoded["expires"] else None
+        print(decoded)
+        return decoded if decoded["exp"] else None
     except jwt.ExpiredSignatureError:
-        print("Token expired. Get new one")
-        return None
+        raise HTTPException(status_code=403, detail="Token expired.")
     except:
-        return None
+        raise HTTPException(status_code=403, detail="Invalid token.")
 
 
 def encryptPassword(password: str) -> str:

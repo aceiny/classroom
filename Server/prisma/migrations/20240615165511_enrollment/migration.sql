@@ -26,9 +26,17 @@ CREATE TABLE "Classroom" (
 );
 
 -- CreateTable
+CREATE TABLE "InviteLink" (
+    "id" TEXT NOT NULL,
+    "classroomId" TEXT NOT NULL,
+
+    CONSTRAINT "InviteLink_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Enrollment" (
     "id" TEXT NOT NULL,
-    "studentId" TEXT NOT NULL,
+    "membreId" TEXT NOT NULL,
     "classroomId" TEXT NOT NULL,
 
     CONSTRAINT "Enrollment_pkey" PRIMARY KEY ("id")
@@ -58,25 +66,28 @@ CREATE TABLE "Submission" (
 );
 
 -- CreateTable
-CREATE TABLE "_StudentClassrooms" (
-    "A" TEXT NOT NULL,
-    "B" TEXT NOT NULL
+CREATE TABLE "File" (
+    "id" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "path" TEXT NOT NULL,
+    "type" TEXT NOT NULL,
+    "size" TEXT NOT NULL,
+    "submissionId" TEXT NOT NULL,
+
+    CONSTRAINT "File_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
--- CreateIndex
-CREATE UNIQUE INDEX "_StudentClassrooms_AB_unique" ON "_StudentClassrooms"("A", "B");
-
--- CreateIndex
-CREATE INDEX "_StudentClassrooms_B_index" ON "_StudentClassrooms"("B");
-
 -- AddForeignKey
 ALTER TABLE "Classroom" ADD CONSTRAINT "Classroom_professorId_fkey" FOREIGN KEY ("professorId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_studentId_fkey" FOREIGN KEY ("studentId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "InviteLink" ADD CONSTRAINT "InviteLink_classroomId_fkey" FOREIGN KEY ("classroomId") REFERENCES "Classroom"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_membreId_fkey" FOREIGN KEY ("membreId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_classroomId_fkey" FOREIGN KEY ("classroomId") REFERENCES "Classroom"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -94,7 +105,4 @@ ALTER TABLE "Submission" ADD CONSTRAINT "Submission_courseworkId_fkey" FOREIGN K
 ALTER TABLE "Submission" ADD CONSTRAINT "Submission_studentId_fkey" FOREIGN KEY ("studentId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "_StudentClassrooms" ADD CONSTRAINT "_StudentClassrooms_A_fkey" FOREIGN KEY ("A") REFERENCES "Classroom"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "_StudentClassrooms" ADD CONSTRAINT "_StudentClassrooms_B_fkey" FOREIGN KEY ("B") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "File" ADD CONSTRAINT "File_submissionId_fkey" FOREIGN KEY ("submissionId") REFERENCES "Submission"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

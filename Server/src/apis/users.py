@@ -1,23 +1,25 @@
 from typing import List
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends , HTTPException
 from src.prisma import prisma
 from src.utils.auth import JWTBearer, decodeJWT
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/user",
+    tags=["user"],
+    responses={404: {"description": "Not found"}},
+)
 
 
-@router.get("/users/", tags=["users"])
+@router.get("/", tags=["users"])
 async def read_users():
     users = await prisma.user.find_many()
-    print("users", users)
-
     for user in users:
         del user.password
 
     return users
 
 
-@router.get("/users/me", tags=["users"])
+@router.get("/me", tags=["users"])
 async def read_user_me(token=Depends(JWTBearer())):
     decoded = decodeJWT(token)
 
@@ -27,8 +29,9 @@ async def read_user_me(token=Depends(JWTBearer())):
     return None
 
 
-@router.get("/users/{userId}", tags=["users"])
+@router.get("/{userId}", tags=["users"])
 async def read_user(userId: str):
     user = await prisma.user.find_unique(where={"id": userId})
-
+    if not user : 
+        raise HTTPException(status_code=404, detail="User not found")
     return user

@@ -18,7 +18,7 @@ router = APIRouter(
 )
 
 
-@router.post("/sign-in", tags=["auth/signin"])
+@router.post("/sign-in")
 async def sign_in(signIn: UserLoginDto):
     user = await prisma.user.find_first(
             where={
@@ -39,7 +39,7 @@ async def sign_in(signIn: UserLoginDto):
 
 
 
-@router.post("/sign-up", tags=["auth/signup"])
+@router.post("/sign-up",)
 async def sign_up(user: UserRegisterDto):
     user_exists = await prisma.user.find_first(
         where={
