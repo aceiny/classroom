@@ -48,7 +48,6 @@ async def sign_up(user: UserRegisterDto):
     )
     if user_exists:
         raise HTTPException(status_code=400, detail="User already exists")
-    password = encryptPassword(user.password)
     created = await prisma.user.create(
         {
             "name" : user.name,
@@ -64,7 +63,7 @@ async def sign_up(user: UserRegisterDto):
         
 
 
-@router.get("/", tags=["auth"])
+@router.get("/", description="Get all users") 
 async def auth():
     users = await prisma.user.find_many()
 

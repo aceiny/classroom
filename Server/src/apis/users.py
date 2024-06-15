@@ -10,7 +10,7 @@ router = APIRouter(
 )
 
 
-@router.get("/", tags=["users"])
+@router.get("/")
 async def read_users():
     users = await prisma.user.find_many()
     for user in users:
@@ -19,7 +19,7 @@ async def read_users():
     return users
 
 
-@router.get("/me", tags=["users"])
+@router.get("/me")
 async def read_user_me(token=Depends(JWTBearer())):
     decoded = decodeJWT(token)
 
@@ -29,7 +29,7 @@ async def read_user_me(token=Depends(JWTBearer())):
     return None
 
 
-@router.get("/{userId}", tags=["users"])
+@router.get("/{userId}")
 async def read_user(userId: str):
     user = await prisma.user.find_unique(where={"id": userId})
     if not user : 

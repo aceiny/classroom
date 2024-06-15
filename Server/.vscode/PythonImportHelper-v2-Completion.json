@@ -604,7 +604,7 @@
         "kind": 5,
         "importPath": "src.apis.users",
         "description": "src.apis.users",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/user\",\n    tags=[\"user\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get(\"/\", tags=[\"users\"])\nasync def read_users():\n    users = await prisma.user.find_many()\n    for user in users:\n        del user.password",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/user\",\n    tags=[\"user\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get(\"/\")\nasync def read_users():\n    users = await prisma.user.find_many()\n    for user in users:\n        del user.password",
         "detail": "src.apis.users",
         "documentation": {}
     },
