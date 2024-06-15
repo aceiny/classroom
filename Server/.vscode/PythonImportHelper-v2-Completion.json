@@ -24,6 +24,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -33,6 +41,14 @@
     },
     {
         "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -160,7 +176,39 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -185,6 +233,22 @@
     },
     {
         "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -253,6 +317,22 @@
         "description": "src.types.user_types",
         "isExtraImport": true,
         "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
         "documentation": {}
     },
     {
@@ -368,6 +448,22 @@
         "documentation": {}
     },
     {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
         "label": "src.apis",
         "kind": 6,
         "isExtraImport": true,
@@ -409,6 +505,22 @@
         "documentation": {}
     },
     {
+        "label": "courswork",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.apis.auth",
+        "description": "src.apis.auth",
+        "isExtraImport": true,
+        "detail": "src.apis.auth",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "src.apis.auth",
         "description": "src.apis.auth",
@@ -446,6 +558,39 @@
         "description": "src.types.classroom_types",
         "isExtraImport": true,
         "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateClassRoomDto",
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "isExtraImport": true,
+        "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "CreateClassRoomDto",
+        "importPath": "src.types.classroom_types",
+        "description": "src.types.classroom_types",
+        "isExtraImport": true,
+        "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_user_is_classroom_professor",
+        "importPath": "src.utils.classroom",
+        "description": "src.utils.classroom",
+        "isExtraImport": true,
+        "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -593,6 +738,15 @@
     {
         "label": "router",
         "kind": 5,
+        "importPath": "src.apis.courswork",
+        "description": "src.apis.courswork",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/courswork\",\n    tags=[\"courswork\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_coursworks(classroomId : str):\n    classroom = await prisma.classroom.find_unique(\n        where = {\n            id : classroomId",
+        "detail": "src.apis.courswork",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
         "importPath": "src.apis.enrollment",
         "description": "src.apis.enrollment",
         "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/me', tags=[\"enrollment\"])\nasync def get_enrollments():\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    enrollment = await prisma.enrollment.find_many(\n        where={",
@@ -624,6 +778,24 @@
         "description": "src.types.classroom_types",
         "peekOfCode": "class UpdateClassRoomDto(BaseModel) : \n    name : str",
         "detail": "src.types.classroom_types",
+        "documentation": {}
+    },
+    {
+        "label": "CourseWorkType",
+        "kind": 6,
+        "importPath": "src.types.courswork_types",
+        "description": "src.types.courswork_types",
+        "peekOfCode": "class CourseWorkType(Enum):\n    Assignment = \"Assignment\"\n    Quiz = \"Quiz\"\n    Exam = \"Exam\"\n    Project = \"Project\"\n    Other = \"Other\"\nclass CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime",
+        "detail": "src.types.courswork_types",
+        "documentation": {}
+    },
+    {
+        "label": "CreateCoursworkDto",
+        "kind": 6,
+        "importPath": "src.types.courswork_types",
+        "description": "src.types.courswork_types",
+        "peekOfCode": "class CreateCoursworkDto(BaseModel):\n    title: str\n    description: str\n    due_date: datetime\n    type: CourseWorkType",
+        "detail": "src.types.courswork_types",
         "documentation": {}
     },
     {
