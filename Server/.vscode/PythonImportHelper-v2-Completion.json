@@ -1,35 +1,18 @@
 [
     {
-        "label": "datetime",
-        "kind": 6,
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
         "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
+        "detail": "enum",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
         "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "enum",
         "documentation": {}
     },
     {
@@ -137,6 +120,14 @@
         "documentation": {}
     },
     {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Gender",
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
@@ -233,11 +224,27 @@
         "documentation": {}
     },
     {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "enum",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -369,7 +376,7 @@
         "kind": 5,
         "importPath": "src.apis.auth",
         "description": "src.apis.auth",
-        "peekOfCode": "router = APIRouter()\n@router.post(\"/auth/sign-in\", tags=[\"auth\"])\nasync def sign_in(signIn: UserLoginDto):\n    try : \n            user = await prisma.user.find_first(\n                where={\n                    \"username\": signIn.username,\n                }\n            )\n    except Exception as e : ",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/auth\",\n    tags=[\"auth\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.post(\"/sign-in\", tags=[\"auth/signin\"])\nasync def sign_in(signIn: UserLoginDto):\n    user = await prisma.user.find_first(\n            where={\n                \"email\": signIn.email,",
         "detail": "src.apis.auth",
         "documentation": {}
     },
@@ -387,7 +394,16 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class Gender(Enum):\n    Male = \"male\"\n    Female = \"female\"\nclass UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str",
+        "peekOfCode": "class Gender(Enum):\n    Male = \"Male\"\n    Female = \"Female\"\nclass UserRole(Enum) : \n    Student = \"Student\"\n    Professeur = \"Professeur\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : ",
+        "detail": "src.types.user_types",
+        "documentation": {}
+    },
+    {
+        "label": "UserRole",
+        "kind": 6,
+        "importPath": "src.types.user_types",
+        "description": "src.types.user_types",
+        "peekOfCode": "class UserRole(Enum) : \n    Student = \"Student\"\n    Professeur = \"Professeur\"\nclass UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : \n    name : str \n    email : EmailStr \n    password : str",
         "detail": "src.types.user_types",
         "documentation": {}
     },
@@ -396,7 +412,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class UserLoginDto(BaseModel) : \n    username : str \n    password : str\nclass UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : Gender\nclass SignInOut(BaseModel):\n    token: str",
+        "peekOfCode": "class UserLoginDto(BaseModel) : \n    email : EmailStr\n    password : str\nclass UserRegisterDto(BaseModel) : \n    name : str \n    email : EmailStr \n    password : str\n    gender : Gender\n    role : UserRole\nclass SignInOut(BaseModel):",
         "detail": "src.types.user_types",
         "documentation": {}
     },
@@ -405,7 +421,7 @@
         "kind": 6,
         "importPath": "src.types.user_types",
         "description": "src.types.user_types",
-        "peekOfCode": "class UserRegisterDto(BaseModel) : \n    username : str \n    password : str\n    name : str\n    gender : Gender\nclass SignInOut(BaseModel):\n    token: str\n    id : str",
+        "peekOfCode": "class UserRegisterDto(BaseModel) : \n    name : str \n    email : EmailStr \n    password : str\n    gender : Gender\n    role : UserRole\nclass SignInOut(BaseModel):\n    token: str\n    id : str",
         "detail": "src.types.user_types",
         "documentation": {}
     },

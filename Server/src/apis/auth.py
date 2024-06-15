@@ -1,4 +1,4 @@
-import datetime
+from enum import Enum
 from typing import List, Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
@@ -11,47 +11,60 @@ from src.utils.auth import (
 )
 from src.types.user_types import SignInOut, UserLoginDto, UserRegisterDto
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/auth",
+    tags=["auth"],
+    responses={404: {"description": "Not found"}},
+)
 
 
-@router.post("/auth/sign-in", tags=["auth"])
+@router.post("/sign-in", tags=["auth/signin"])
 async def sign_in(signIn: UserLoginDto):
-    try : 
-            user = await prisma.user.find_first(
-                where={
-                    "username": signIn.username,
-                }
-            )
-    except Exception as e : 
-        raise HTTPException(status_code=404, detail="User not found")
+    user = await prisma.user.find_first(
+            where={
+                "email": signIn.email,
+            }
+        )
+    if user is None:
+        raise HTTPException(status_code=404, detail="Invalid Credentials")
     validated = validatePassword(signIn.password, user.password)
     del user.password
 
-    if validated:
-        token = signJWT(user.id)
-        return SignInOut(token=token, id=user.id)
-
-    return None
-
-
+    if not validated:
+        raise HTTPException(status_code=404, detail="Invalid Credentials")
+    token = signJWT(user.id)
+    return SignInOut(token=token, id=user.id)
+    
 
 
-@router.post("/auth/sign-up", tags=["auth"])
+
+
+@router.post("/sign-up", tags=["auth/signup"])
 async def sign_up(user: UserRegisterDto):
+    user_exists = await prisma.user.find_first(
+        where={
+            "email": user.email,
+        }
+    )
+    if user_exists:
+        raise HTTPException(status_code=400, detail="User already exists")
     password = encryptPassword(user.password)
     created = await prisma.user.create(
         {
-            "username": user.username,
+            "name" : user.name,
+            "email": user.email,  
+            "gender": user.gender.value,
+            "role": user.role.value,
             "password": encryptPassword(user.password),
-            "name": user.name,
-            "gender": user.gender,
         }
     )
+    if created : 
+        token = signJWT(created.id)
+        return SignInOut(token=token, id=created.id)
+        
 
-    return created
 
-
-@router.get("/auth/", tags=["auth"])
+@router.get("/", tags=["auth"])
 async def auth():
     users = await prisma.user.find_many()
 

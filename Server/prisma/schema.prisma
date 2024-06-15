@@ -66,6 +66,16 @@ model Submission {
   courseworkId String
   studentId    String
   content      String
+  files       File[]
   coursework   Coursework @relation(fields: [courseworkId], references: [id])
   student      User       @relation(fields: [studentId], references: [id])
+}
+model File {
+  id String @id @default(cuid())
+  name String
+  path String
+  type String 
+  size String 
+  submissionId String
+  submission Submission @relation(fields: [submissionId], references: [id])
 }

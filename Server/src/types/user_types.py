@@ -1,20 +1,24 @@
-from pydantic import BaseModel
+from pydantic import BaseModel , EmailStr
 from enum import Enum
 
-
 class Gender(Enum):
-    Male = "male"
-    Female = "female"
+    Male = "Male"
+    Female = "Female"
+
+class UserRole(Enum) : 
+    Student = "Student"
+    Professeur = "Professeur"
 
 class UserLoginDto(BaseModel) : 
-    username : str 
+    email : EmailStr
     password : str
 
 class UserRegisterDto(BaseModel) : 
-    username : str 
+    name : str 
+    email : EmailStr 
     password : str
-    name : str
     gender : Gender
+    role : UserRole
 
 class SignInOut(BaseModel):
     token: str
