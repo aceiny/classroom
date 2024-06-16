@@ -24,7 +24,17 @@ async def add_file(submissionId : str):
     userId= "clxgdek8c00007q5axo4hg1dc"
     files = await prisma.file.find_many(
         where = {
-            "submissionId" : submissionId
+            "submissionId" : submissionId,
+            "userId" : userId
         }
     )
     return files
+
+@router.get('/courswork/{coursworkId}')
+async def get_courswork_files(coursworkId : str):
+    userId = "clxgdek8c00007q5axo4hg1dc"
+    courswork = await prisma.courswork.find_unique(
+        where = {
+            "id" : coursworkId
+        }
+    )
