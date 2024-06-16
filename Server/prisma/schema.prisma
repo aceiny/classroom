@@ -19,7 +19,8 @@ model User {
   classroomsAsProfessor Classroom[]  @relation("ProfessorClassrooms")
   enrollments           Enrollment[]
   submissions           Submission[]
-  Coursworks           Courswork[] @relation("CoursworkProfessor") 
+  coursworks           Courswork[] @relation("CoursworkProfessor") 
+  files                 File[]
 }
 
 enum Gender {
@@ -67,6 +68,7 @@ model Courswork {
   classroom   Classroom    @relation(fields: [classroomId], references: [id])
   professor   User         @relation("CoursworkProfessor", fields: [professorId], references: [id]) // Updated line
   submissions Submission[]
+  files       File[]
 }
 
 enum CoursworkType{
@@ -77,20 +79,25 @@ enum CoursworkType{
   Other
 }
 model Submission {
-  id           String     @id @default(cuid())
+  id         String     @id @default(cuid())
   CoursworkId String
-  studentId    String
-  content      String
-  files       File[]
-  Courswork   Courswork @relation(fields: [CoursworkId], references: [id])
-  student      User       @relation(fields: [studentId], references: [id])
+  studentId  String
+  content    String
+  Courswork  Courswork? @relation(fields: [CoursworkId], references: [id])
+  student    User?      @relation(fields: [studentId], references: [id])
+  files      File[]
 }
-model File {
-  id String @id @default(cuid())
-  name String
-  path String
-  type String 
-  size String 
-  submissionId String
-  submission Submission @relation(fields: [submissionId], references: [id])
+
+model File {
+  id           String     @id @default(cuid())
+  name         String
+  path         String
+  type         String
+  size         String
+  userId       String
+  user         User?      @relation(fields: [userId], references: [id])
+  submissionId String?
+  submission   Submission? @relation(fields: [submissionId], references: [id])
+  coursworkId String?
+  courswork   Courswork? @relation(fields: [coursworkId], references: [id])
 }

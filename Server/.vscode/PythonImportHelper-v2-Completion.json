@@ -208,6 +208,46 @@
         "documentation": {}
     },
     {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -241,6 +281,22 @@
     },
     {
         "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -297,6 +353,14 @@
     },
     {
         "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -424,6 +488,22 @@
         "documentation": {}
     },
     {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
+        "label": "prisma",
+        "importPath": "src.prisma",
+        "description": "src.prisma",
+        "isExtraImport": true,
+        "detail": "src.prisma",
+        "documentation": {}
+    },
+    {
         "label": "encryptPassword",
         "importPath": "src.utils.auth",
         "description": "src.utils.auth",
@@ -441,6 +521,22 @@
     },
     {
         "label": "validatePassword",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "JWTBearer",
+        "importPath": "src.utils.auth",
+        "description": "src.utils.auth",
+        "isExtraImport": true,
+        "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
         "importPath": "src.utils.auth",
         "description": "src.utils.auth",
         "isExtraImport": true,
@@ -585,6 +681,22 @@
         "documentation": {}
     },
     {
+        "label": "file",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.apis.auth",
+        "description": "src.apis.auth",
+        "isExtraImport": true,
+        "detail": "src.apis.auth",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "src.apis.auth",
         "description": "src.apis.auth",
@@ -713,6 +825,14 @@
         "documentation": {}
     },
     {
+        "label": "add_file",
+        "importPath": "src.utils.file",
+        "description": "src.utils.file",
+        "isExtraImport": true,
+        "detail": "src.utils.file",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "kind": 6,
         "isExtraImport": true,
@@ -794,6 +914,23 @@
         "importPath": "jwt",
         "description": "jwt",
         "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
         "documentation": {}
     },
     {
@@ -884,9 +1021,18 @@
     {
         "label": "router",
         "kind": 5,
+        "importPath": "src.apis.file",
+        "description": "src.apis.file",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/file\",\n    tags=[\"file\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{fileId}')\nasync def get_file(fileId : str):\n    file = await prisma.file.find_unique(\n        where = {\n            \"id\" : fileId",
+        "detail": "src.apis.file",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
         "importPath": "src.apis.submission",
         "description": "src.apis.submission",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/submission\",\n    tags=[\"submission\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_submissions(classroomId : str,submission : CreateSubmissionDto):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_is_classroom_professor(classroomId, userId)\n    submissions = await prisma.submission.find_many(",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/submission\",\n    tags=[\"submission\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_submissions(classroomId : str):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_is_classroom_professor(classroomId, userId)\n    submissions = await prisma.submission.find_many(",
         "detail": "src.apis.submission",
         "documentation": {}
     },
@@ -936,11 +1082,20 @@
         "documentation": {}
     },
     {
+        "label": "CreateFileDto",
+        "kind": 6,
+        "importPath": "src.types.file_types",
+        "description": "src.types.file_types",
+        "peekOfCode": "class CreateFileDto(BaseModel) : \n    name : str \n    path : str \n    type : str  \n    size : str",
+        "detail": "src.types.file_types",
+        "documentation": {}
+    },
+    {
         "label": "CreateSubmissionDto",
         "kind": 6,
         "importPath": "src.types.submission_types",
         "description": "src.types.submission_types",
-        "peekOfCode": "class CreateSubmissionDto(BaseModel):\n    content : str\n    files : list[str]\n    coursworkId : str",
+        "peekOfCode": "class CreateSubmissionDto(BaseModel):\n    content : str\n    files : list[str]",
         "detail": "src.types.submission_types",
         "documentation": {}
     },
@@ -1041,6 +1196,15 @@
         "description": "src.utils.auth",
         "peekOfCode": "jwtSecret = os.environ.get(\"JWT_SECRET\")\ndef signJWT(user_id: str) -> Dict[str, str]:\n    EXPIRES = datetime.now(tz=timezone.utc) + timedelta(days=365)\n    payload = {\n        \"exp\": EXPIRES,\n        \"userId\": user_id,\n    }\n    token = jwt.encode(payload, jwtSecret, algorithm=\"HS256\")\n    return token\ndef decodeJWT(token: str) -> dict:",
         "detail": "src.utils.auth",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOAD_DIRECTORY",
+        "kind": 5,
+        "importPath": "src.utils.file",
+        "description": "src.utils.file",
+        "peekOfCode": "UPLOAD_DIRECTORY = Path(\"uploads/\")\nUPLOAD_DIRECTORY.mkdir(exist_ok=True)\nasync def add_file(file : UploadFile , userId : str , coursworkId : str | None = None , submissionId : str | None = None):\n    print(file , userId , coursworkId , submissionId)\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    try : \n        file_path = UPLOAD_DIRECTORY / datetime.datetime.now().strftime(\"%Y%m%d%H%M%S\") + file.filename\n        with file_path.open(\"wb\") as buffer:\n                shutil.copyfileobj(file.file, buffer)\n        file_Obj = await prisma.file.create(",
+        "detail": "src.utils.file",
         "documentation": {}
     },
     {
