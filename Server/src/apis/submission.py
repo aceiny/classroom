@@ -1,6 +1,6 @@
 import src.apis
-from typing import List
-from fastapi import APIRouter, Depends , HTTPException, UploadFile
+from typing import List , Annotated
+from fastapi import APIRouter, Depends , HTTPException, UploadFile , Form 
 from src.prisma import prisma
 from src.utils.auth import JWTBearer, decodeJWT
 from src.apis.auth import router
@@ -25,21 +25,26 @@ async def get_classroom_all_submissions(classroomId : str):
     return submissions
 
 @router.post('/{coursworkId}')
-async def add_submission( coursworkId : str , submission : CreateSubmissionDto , files : List[UploadFile]):
-    userId = "clxgdek8c00007q5axo4hg1"
-    classroomId = await prisma.courswork.find_unique(
+async def add_submission( coursworkId : str , content : Annotated[str , Form()] , files : List[UploadFile]):
+    userId = "clxgdek8c00007q5axo4hg1dc"
+    courswork = await prisma.courswork.find_unique(
         where = {
             "id" : coursworkId
         }
-    ).classroomId
+    )
+    if not courswork : 
+        raise HTTPException(status_code=404, detail="Courswork not found")
+    classroomId = courswork.classroomId
     await check_if_user_enrolleed_in_classroom(classroomId, userId)
     submissionObj = await prisma.submission.create(
         {
-            "content" : submission.content,
-            "CoursworkId": submission.coursworkId,
-            "files" : submission.files
+            "content" : content,
+            "CoursworkId": coursworkId,
+            "studentId" : userId
         }
     )
+    if not submissionObj : 
+        raise HTTPException(status_code=404, detail="Submission failed")
     for file in files:
-        await add_file(file , userId ,submissionId = submissionObj.id ) 
+         await add_file(file , userId ,submissionId = submissionObj.id )
     return submissionObj

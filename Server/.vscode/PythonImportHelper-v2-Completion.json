@@ -80,6 +80,14 @@
         "documentation": {}
     },
     {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -241,6 +249,14 @@
     },
     {
         "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -1203,7 +1219,7 @@
         "kind": 5,
         "importPath": "src.utils.file",
         "description": "src.utils.file",
-        "peekOfCode": "UPLOAD_DIRECTORY = Path(\"uploads/\")\nUPLOAD_DIRECTORY.mkdir(exist_ok=True)\nasync def add_file(file : UploadFile , userId : str , coursworkId : str | None = None , submissionId : str | None = None):\n    print(file , userId , coursworkId , submissionId)\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    try : \n        file_path = UPLOAD_DIRECTORY / datetime.datetime.now().strftime(\"%Y%m%d%H%M%S\") + file.filename\n        with file_path.open(\"wb\") as buffer:\n                shutil.copyfileobj(file.file, buffer)\n        file_Obj = await prisma.file.create(",
+        "peekOfCode": "UPLOAD_DIRECTORY = Path(\"uploads/\")\nUPLOAD_DIRECTORY.mkdir(exist_ok=True)\nasync def add_file(file: UploadFile, userId: str, coursworkId: str = None, submissionId: str = None):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    try:\n        file_path = os.path.join(UPLOAD_DIRECTORY, datetime.datetime.now().strftime(\"%Y%m%d%H%M%S\") + file.filename)        \n        with open(file_path, \"wb\") as buffer:\n            shutil.copyfileobj(file.file, buffer)\n        file_obj = await prisma.file.create(\n            {",
         "detail": "src.utils.file",
         "documentation": {}
     },

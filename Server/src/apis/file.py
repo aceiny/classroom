@@ -18,3 +18,13 @@ async def get_file(fileId : str):
     if not file : 
         raise HTTPException(status_code=404, detail="File not found")
     return file
+
+@router.get('/submission/{submissionId}')
+async def add_file(submissionId : str):
+    userId= "clxgdek8c00007q5axo4hg1dc"
+    files = await prisma.file.find_many(
+        where = {
+            "submissionId" : submissionId
+        }
+    )
+    return files
