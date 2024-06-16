@@ -56,30 +56,6 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Annotated",
         "importPath": "typing",
         "description": "typing",
@@ -216,14 +192,6 @@
         "documentation": {}
     },
     {
-        "label": "UploadFile",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -313,6 +281,22 @@
     },
     {
         "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -576,135 +560,6 @@
         "documentation": {}
     },
     {
-        "label": "JWTBearer",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "decodeJWT",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "JWTBearer",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "decodeJWT",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "JWTBearer",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "decodeJWT",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "JWTBearer",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "decodeJWT",
-        "importPath": "src.utils.auth",
-        "description": "src.utils.auth",
-        "isExtraImport": true,
-        "detail": "src.utils.auth",
-        "documentation": {}
-    },
-    {
-        "label": "src.apis",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "users",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "auth",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "classroom",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "enrollment",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "courswork",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "submission",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
-        "label": "file",
-        "importPath": "src.apis",
-        "description": "src.apis",
-        "isExtraImport": true,
-        "detail": "src.apis",
-        "documentation": {}
-    },
-    {
         "label": "router",
         "importPath": "src.apis.auth",
         "description": "src.apis.auth",
@@ -761,30 +616,6 @@
         "documentation": {}
     },
     {
-        "label": "CreateClassRoomDto",
-        "importPath": "src.types.classroom_types",
-        "description": "src.types.classroom_types",
-        "isExtraImport": true,
-        "detail": "src.types.classroom_types",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateClassRoomDto",
-        "importPath": "src.types.classroom_types",
-        "description": "src.types.classroom_types",
-        "isExtraImport": true,
-        "detail": "src.types.classroom_types",
-        "documentation": {}
-    },
-    {
-        "label": "CreateClassRoomDto",
-        "importPath": "src.types.classroom_types",
-        "description": "src.types.classroom_types",
-        "isExtraImport": true,
-        "detail": "src.types.classroom_types",
-        "documentation": {}
-    },
-    {
         "label": "check_if_user_is_classroom_professor",
         "importPath": "src.utils.classroom",
         "description": "src.utils.classroom",
@@ -822,6 +653,46 @@
         "description": "src.utils.classroom",
         "isExtraImport": true,
         "detail": "src.utils.classroom",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "src.utils.user",
+        "description": "src.utils.user",
+        "isExtraImport": true,
+        "detail": "src.utils.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "src.utils.user",
+        "description": "src.utils.user",
+        "isExtraImport": true,
+        "detail": "src.utils.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "src.utils.user",
+        "description": "src.utils.user",
+        "isExtraImport": true,
+        "detail": "src.utils.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "src.utils.user",
+        "description": "src.utils.user",
+        "isExtraImport": true,
+        "detail": "src.utils.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "src.utils.user",
+        "description": "src.utils.user",
+        "isExtraImport": true,
+        "detail": "src.utils.user",
         "documentation": {}
     },
     {
@@ -830,14 +701,6 @@
         "description": "src.types.courswork_types",
         "isExtraImport": true,
         "detail": "src.types.courswork_types",
-        "documentation": {}
-    },
-    {
-        "label": "CreateSubmissionDto",
-        "importPath": "src.types.submission_types",
-        "description": "src.types.submission_types",
-        "isExtraImport": true,
-        "detail": "src.types.submission_types",
         "documentation": {}
     },
     {
@@ -999,6 +862,62 @@
         "documentation": {}
     },
     {
+        "label": "users",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "classroom",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "enrollment",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "courswork",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "submission",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "importPath": "src.apis",
+        "description": "src.apis",
+        "isExtraImport": true,
+        "detail": "src.apis",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "src.apis.auth",
@@ -1021,7 +940,7 @@
         "kind": 5,
         "importPath": "src.apis.courswork",
         "description": "src.apis.courswork",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/courswork\",\n    tags=[\"courswork\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_coursworks(classroomId : str):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_enrolleed_in_classroom(classroomId, userId)\n    classroom = await prisma.classroom.find_unique(",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/courswork\",\n    tags=[\"courswork\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_coursworks(classroomId : str , userId=Depends(get_current_user)):\n    await check_if_user_enrolleed_in_classroom(classroomId, userId)\n    classroom = await prisma.classroom.find_unique(\n        where = {",
         "detail": "src.apis.courswork",
         "documentation": {}
     },
@@ -1030,7 +949,7 @@
         "kind": 5,
         "importPath": "src.apis.enrollment",
         "description": "src.apis.enrollment",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/me', tags=[\"enrollment\"])\nasync def get_enrollments():\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    enrollment = await prisma.enrollment.find_many(\n        where={",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/enrollment\",\n    tags=[\"enrollment\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/me', tags=[\"enrollment\"])\nasync def get_enrollments(userId=Depends(get_current_user)):\n    enrollment = await prisma.enrollment.find_many(\n        where={\n            \"membreId\": userId ",
         "detail": "src.apis.enrollment",
         "documentation": {}
     },
@@ -1039,7 +958,7 @@
         "kind": 5,
         "importPath": "src.apis.file",
         "description": "src.apis.file",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/file\",\n    tags=[\"file\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{fileId}')\nasync def get_file(fileId : str):\n    file = await prisma.file.find_unique(\n        where = {\n            \"id\" : fileId",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/file\",\n    tags=[\"file\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{fileId}')\nasync def get_file_by_id(fileId : str , userId=Depends(get_current_user) ):\n    file = await prisma.file.find_unique(\n        where = {\n            \"id\" : fileId",
         "detail": "src.apis.file",
         "documentation": {}
     },
@@ -1048,7 +967,7 @@
         "kind": 5,
         "importPath": "src.apis.submission",
         "description": "src.apis.submission",
-        "peekOfCode": "router = APIRouter(\n    prefix=\"/submission\",\n    tags=[\"submission\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_submissions(classroomId : str):\n    userId = \"clxgdek8c00007q5axo4hg1dc\"\n    await check_if_user_is_classroom_professor(classroomId, userId)\n    submissions = await prisma.submission.find_many(",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/submission\",\n    tags=[\"submission\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@router.get('/{classroomId}')\nasync def get_classroom_all_submissions(classroomId : str ,  userId=Depends(get_current_user)):\n    await check_if_user_is_classroom_professor(classroomId, userId)\n    submissions = await prisma.submission.find_many(\n        where = {",
         "detail": "src.apis.submission",
         "documentation": {}
     },
@@ -1183,7 +1102,7 @@
         "kind": 2,
         "importPath": "src.utils.auth",
         "description": "src.utils.auth",
-        "peekOfCode": "def decodeJWT(token: str) -> dict:\n    try:\n        decoded = jwt.decode(token, jwtSecret, algorithms=[\"HS256\"])\n        print(decoded)\n        return decoded if decoded[\"exp\"] else None\n    except jwt.ExpiredSignatureError:\n        raise HTTPException(status_code=403, detail=\"Token expired.\")\n    except:\n        raise HTTPException(status_code=403, detail=\"Invalid token.\")\ndef encryptPassword(password: str) -> str:",
+        "peekOfCode": "def decodeJWT(token: str) -> dict:\n    try:\n        decoded = jwt.decode(token, jwtSecret, algorithms=[\"HS256\"])\n        return decoded if decoded[\"exp\"] else None\n    except jwt.ExpiredSignatureError:\n        raise HTTPException(status_code=403, detail=\"Token expired.\")\n    except:\n        raise HTTPException(status_code=403, detail=\"Invalid token.\")\ndef encryptPassword(password: str) -> str:\n    return bcrypt.hashpw(password.encode(\"utf-8\"), bcrypt.gensalt()).decode(\"utf-8\")",
         "detail": "src.utils.auth",
         "documentation": {}
     },

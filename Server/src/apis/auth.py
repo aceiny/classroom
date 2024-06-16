@@ -64,7 +64,7 @@ async def sign_up(user: UserRegisterDto):
 
 
 @router.get("/", description="Get all users") 
-async def auth():
+async def get_all_users():
     users = await prisma.user.find_many()
 
     for user in users:

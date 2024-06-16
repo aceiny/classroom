@@ -1,10 +1,7 @@
-import src.apis
-from typing import List
 from fastapi import APIRouter, Depends , HTTPException
 from src.prisma import prisma
-from src.utils.auth import JWTBearer, decodeJWT
 from src.apis.auth import router
-from src.types.classroom_types import CreateClassRoomDto
+from src.utils.user import get_current_user
 
 router = APIRouter(
     prefix="/enrollment",
@@ -14,8 +11,7 @@ router = APIRouter(
 
 
 @router.get('/me', tags=["enrollment"])
-async def get_enrollments():
-    userId = "clxgdek8c00007q5axo4hg1dc"
+async def get_enrollments(userId=Depends(get_current_user)):
     enrollment = await prisma.enrollment.find_many(
         where={
             "membreId": userId 
@@ -26,9 +22,7 @@ async def get_enrollments():
     )
     return enrollment
 @router.post('/{classroomId}', tags=["enrollment"])
-async def add_enrollment(classroomId : str):
-    print(classroomId)
-    userId = "clxgdek8c00007q5axo4hg1dc"
+async def add_enrollment(classroomId : str , userId=Depends(get_current_user)):
     classroom = await prisma.classroom.find_unique(
         where={
             "id": classroomId
@@ -52,4 +46,21 @@ async def add_enrollment(classroomId : str):
     })
     if not enrollment : 
         raise HTTPException(status_code=404, detail="Enrollment failed")
+    return enrollment
+
+@router.delete('/{classroomId}', tags=["enrollment"])
+async def delete_enrollment(classroomId : str , userId=Depends(get_current_user))  :
+    enrollment = await prisma.enrollment.find_first(
+        where={
+            "membreId": userId,
+            "classroomId": classroomId
+        }
+    )
+    if not enrollment:
+        raise HTTPException(status_code=404, detail="Enrollment not found")
+    await prisma.enrollment.delete(
+        where={
+            "id": enrollment.id
+        }
+    )
     return enrollment

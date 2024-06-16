@@ -19,7 +19,7 @@ model User {
   classroomsAsProfessor Classroom[]  @relation("ProfessorClassrooms")
   enrollments           Enrollment[]
   submissions           Submission[]
-  coursworks           Courswork[] @relation("CoursworkProfessor") 
+  coursworks            Courswork[] @relation("CoursworkProfessor") 
   files                 File[]
 }
 
@@ -40,14 +40,7 @@ model Classroom {
   professor   User         @relation("ProfessorClassrooms", fields: [professorId], references: [id])
   enrollments Enrollment[]
   Courswork  Courswork[]
-  inviteLinks InviteLink[]
 }
-model InviteLink { 
-  id String @id @default(cuid())
-  classroomId String
-  classroom Classroom @relation(fields: [classroomId], references: [id])
-}
-
 
 model Enrollment {
   id          String    @id @default(cuid())

@@ -1,12 +1,9 @@
-import src.apis
-from typing import List
 from fastapi import APIRouter, Depends , HTTPException
 from src.prisma import prisma
-from src.utils.auth import JWTBearer, decodeJWT
 from src.apis.auth import router
-from src.types.classroom_types import CreateClassRoomDto, UpdateClassRoomDto
 from src.utils.classroom import check_if_user_is_classroom_professor , check_if_user_enrolleed_in_classroom
 from src.types.courswork_types import CreateCoursworkDto
+from src.utils.user import get_current_user
 router = APIRouter(
     prefix="/courswork",
     tags=["courswork"],
@@ -14,8 +11,7 @@ router = APIRouter(
 )
 
 @router.get('/{classroomId}')
-async def get_classroom_all_coursworks(classroomId : str):
-    userId = "clxgdek8c00007q5axo4hg1dc"
+async def get_classroom_all_coursworks(classroomId : str , userId=Depends(get_current_user)):
     await check_if_user_enrolleed_in_classroom(classroomId, userId)
     classroom = await prisma.classroom.find_unique(
         where = {
@@ -27,13 +23,32 @@ async def get_classroom_all_coursworks(classroomId : str):
     coursworks = await prisma.courswork.find_many(
         where = {
             "classroomId" : classroomId
-        }
+        } , 
     )
     return coursworks
 
+@router.get('/{coursworkId}')
+async def get_courswork_by_id(coursworkId : str , userId=Depends(get_current_user)):
+    courswork = await prisma.courswork.find_unique(
+        where = {
+            "id": coursworkId
+        }
+    )
+    if not courswork :
+        raise HTTPException(status_code=404, detail="Courswork not found")
+    await check_if_user_enrolleed_in_classroom(courswork.classroomId, userId)
+    files = await prisma.file.find_many(
+        where = {
+            "coursworkId" : coursworkId
+        }
+    )
+    if files :
+        courswork.files = files
+    return courswork
+
+
 @router.post('/{classroomId}')
-async def add_courswork( classroomId : str , coursework : CreateCoursworkDto):
-    userId = "clxgdek8c00007q5axo4hg1dc"
+async def add_courswork( classroomId : str , coursework : CreateCoursworkDto ,  userId=Depends(get_current_user) ):
     user = await prisma.user.find_unique(
         where=
                 {

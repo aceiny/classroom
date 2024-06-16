@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Depends , HTTPException , UploadFile
+from fastapi import APIRouter, Depends , HTTPException
 from src.prisma import prisma
-from src.utils.auth import JWTBearer, decodeJWT
 from src.apis.auth import router
+from src.utils.user import get_current_user
 router = APIRouter(
     prefix="/file",
     tags=["file"],
@@ -9,7 +9,7 @@ router = APIRouter(
 )
 
 @router.get('/{fileId}')
-async def get_file(fileId : str):
+async def get_file_by_id(fileId : str , userId=Depends(get_current_user) ):
     file = await prisma.file.find_unique(
         where = {
             "id" : fileId
@@ -20,21 +20,20 @@ async def get_file(fileId : str):
     return file
 
 @router.get('/submission/{submissionId}')
-async def add_file(submissionId : str):
+async def get_submission_file(submissionId : str , userId=Depends(get_current_user)) :
     userId= "clxgdek8c00007q5axo4hg1dc"
     files = await prisma.file.find_many(
         where = {
             "submissionId" : submissionId,
-            "userId" : userId
         }
     )
     return files
 
 @router.get('/courswork/{coursworkId}')
-async def get_courswork_files(coursworkId : str):
-    userId = "clxgdek8c00007q5axo4hg1dc"
-    courswork = await prisma.courswork.find_unique(
+async def get_courswork_files(coursworkId : str , userId=Depends(get_current_user)):
+    files = await prisma.file.find_many(
         where = {
-            "id" : coursworkId
+            "coursworkId" : coursworkId,
         }
     )
+    return files
