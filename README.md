@@ -8,19 +8,20 @@ This project is an ambitious undertaking to create a Classroom application simil
 ## Clone the Repository:
 
 ```bash
-$ git clone https://github.com/aceiny/aceiny
+$ https://github.com/aceiny/classroom
 ```
 
 ## Install Dependencies:
 
 ```bash
-Client : $ npm install
-Server : $ npm install
+$ pip install -r requirements.txt
 ```
 ## Api docs
 
 ```bash
-##
+/docs
+or
+/redoc
 ```
 
 ## Database schema
@@ -33,20 +34,12 @@ https://dbdiagram.io/d/classroom-666d0b00a179551be6f10daa
 
 ### Development
 ```bash
-Server : $ npm run start
-Client : $ npm run dev
-```
-
-### Watch Mode
-```bash
-Server : $ npm run start:dev
-Client : $ npm run dev
+fastapi dev main.py
 ```
 ### Production Mode
 
 ```bash
-Server : $ npm run start:prod
-Client : $ npm run build
+fastapi run 
 ```
 
 ## SECURITY MEASURES
@@ -61,9 +54,7 @@ Client : $ npm run build
 - fastapi
 - postgres 
 - prisma 
-- Multer
 - JWT
-- NextJs
 ## Contributors
 - ahmed yassine zeraibi
 - yzeraibi2000@gmail.com
